@@ -1,13 +1,47 @@
 import React from 'react';
 
-const LibrarySong = ({ song, songs, setCurrentSong, id, audioRef }) => {
+const LibrarySong = ({
+  song,
+  songs,
+  setCurrentSong,
+  id,
+  audioRef,
+  isPlaying,
+  setSongs,
+}) => {
   const songSelectHandler = () => {
     const selectedSong = songs.filter((song) => song.id === id);
     setCurrentSong(selectedSong[0]);
-    audioRef.current.play();
+    //add active state
+    const newSongs = songs.map((song) => {
+      if (song.id === id) {
+        return {
+          ...song,
+          active: true,
+        };
+      } else {
+        return {
+          ...song,
+          active: false,
+        };
+      }
+    });
+    setSongs(newSongs);
+    //check if song is playing(StackOverflow) -> if song hasn't loaded yet, it will be undefined, then we wait until it loads up to play on click
+    if (isPlaying) {
+      const playPromise = audioRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise.then((audio) => {
+          audioRef.current.play();
+        });
+      }
+    }
   };
   return (
-    <div onClick={songSelectHandler} className="library-song">
+    <div
+      onClick={songSelectHandler}
+      className={`library-song ${song.active ? 'selected' : ''}`}
+    >
       <img alt="{song.name}" src={song.cover}></img>
       <div className="song-description">
         <h3>{song.name}</h3>

@@ -9,9 +9,9 @@ const LibrarySong = ({
   isPlaying,
   setSongs,
 }) => {
-  const songSelectHandler = () => {
+  const songSelectHandler = async () => {
     const selectedSong = songs.filter((song) => song.id === id);
-    setCurrentSong(selectedSong[0]);
+    await setCurrentSong(selectedSong[0]);
     //add active state
     const newSongs = songs.map((song) => {
       if (song.id === id) {
@@ -28,14 +28,7 @@ const LibrarySong = ({
     });
     setSongs(newSongs);
     //check if song is playing(StackOverflow) -> if song hasn't loaded yet, it will be undefined, then we wait until it loads up to play on click
-    if (isPlaying) {
-      const playPromise = audioRef.current.play();
-      if (playPromise !== undefined) {
-        playPromise.then((audio) => {
-          audioRef.current.play();
-        });
-      }
-    }
+    if (isPlaying) audioRef.current.play();
   };
   return (
     <div

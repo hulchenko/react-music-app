@@ -21,15 +21,6 @@
   }
 }
 
-input[type='range']:focus {
-  outline: none;
-}
-input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 16px;
-  width: 16px;
-}
-
 .track {
   background: lightblue;
   width: 100%;
@@ -69,4 +60,22 @@ input[type='range']::-webkit-slider-thumb {
   .play-control {
     width: 60%;
   }
+}
+
+//Slider styling
+
+//Chrome/Edge
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+}
+
+input[type='range']::-moz-range-thumb {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
 }

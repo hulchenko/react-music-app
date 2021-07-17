@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -18,11 +18,10 @@ const Player = ({
   songs,
   setSongs,
 }) => {
-  //Use Effect
-  const useEffect = () => {
+  const activeLibraryHandler = (nextPrevious) => {
     const newSongs = songs.map(
       (song) => {
-        if (song.id === currentSong.id) {
+        if (song.id === nextPrevious.id) {
           return {
             ...song,
             active: true,
@@ -63,14 +62,17 @@ const Player = ({
     //% is to reset when the counter reaches maximum number in array
     if (direction === 'skip-forward') {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length]);
+      activeLibraryHandler(songs[(currentIndex + 1) % songs.length]);
     }
     if (direction === 'skip-back') {
       if ((currentIndex - 1) % songs.length === -1) {
         await setCurrentSong(songs[songs.length - 1]);
+        activeLibraryHandler(songs[songs.length - 1]);
         if (isPlaying) audioRef.current.play();
         return; //to prevent function below from running, to ensure code works in case of match
       }
       await setCurrentSong(songs[(currentIndex - 1) % songs.length]);
+      activeLibraryHandler(songs[(currentIndex - 1) % songs.length]);
     }
     //check if song is playing(StackOverflow) -> if song hasn't loaded yet, it will be undefined, then we wait until it loads up to play on click
     if (isPlaying) audioRef.current.play();

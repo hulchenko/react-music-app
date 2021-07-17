@@ -5,7 +5,8 @@
   align-items: center;
   justify-content: center;
   img {
-    width: 20%;
+    width: 24%;
+    box-shadow: 1px 1px 25px palevioletred;
     border-radius: 50%;
   }
   h2 {
@@ -22,4 +23,18 @@
       width: 60%;
     }
   }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotateSong {
+  width: 20px;
+  animation: rotate 20s linear forwards infinite;
 }

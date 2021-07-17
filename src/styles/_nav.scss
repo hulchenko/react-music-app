@@ -3,6 +3,12 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  h1 {
+    font-family: 'Monoton', cursive;
+    font-size: 2.5rem;
+    color: palevioletred;
+    text-shadow: 1px 1px 8px rgb(212, 120, 151);
+  }
   button {
     background: transparent;
     cursor: pointer;

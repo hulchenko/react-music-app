@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Song = ({ currentSong }) => {
+const Song = ({ currentSong, isPlaying }) => {
   return (
     <div className="song-container">
-      <img alt="album-cover" src={currentSong.cover}></img>
+      <img
+        alt="album-cover"
+        className={isPlaying ? 'rotateSong' : ''}
+        src={currentSong.cover}
+      />
       <h2>{currentSong.name}</h2>
       <h3>{currentSong.artist}</h3>
     </div>

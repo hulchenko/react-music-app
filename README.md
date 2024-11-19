@@ -1,4 +1,21 @@
 ## React Music App
 
-[DEMO](https://kind-aryabhata-44a21e.netlify.app/)
-![image](https://github.com/hulchenko/react-music-app/assets/74687999/0aaaf5bb-8a0c-4f27-a7b3-8397ec776665)
+Boombox is a simple yet visually appealing music player application that allows users to play their favorite songs, skip between tracks, pause, and navigate through the song timeline. With a clean interface and smooth controls, Boombox provides an intuitive and enjoyable experience for music lovers.
+
+<img src="https://raw.githubusercontent.com/hulchenko/boombox/main/public/img/desktop-screen.png" alt="App Screenshot"/>
+
+### Features:
+
+Visual Playback: A dynamic visual display that enhances the music experience.
+Play and Pause: Start and stop the music with a single click.
+Skip to Any Part of the Song: Move the playback slider to jump to any part of the current track.
+Navigate Between Songs: Skip to the next song or go back to the previous one easily.
+
+### Technologies Used:
+
+React
+SCSS
+
+### Live Demo:
+
+You can access the live demo of the app here: https://kind-aryabhata-44a21e.netlify.app/

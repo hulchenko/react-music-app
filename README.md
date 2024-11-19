@@ -1,6 +1,6 @@
-## React Music App
+## React BoomBox Music App
 
-Boombox is a simple yet visually appealing music player application that allows users to play their favourite songs, skip between tracks, pause, and navigate through the song timeline. With a clean interface and smooth controls, Boombox provides an intuitive and enjoyable experience for music lovers.
+BoomBox is a simple yet visually appealing music player application that allows users to play their favourite songs, skip between tracks, pause, and navigate through the song timeline. With a clean interface and smooth controls, BoomBox provides an intuitive and enjoyable experience for music lovers.
 
 <img src="https://raw.githubusercontent.com/hulchenko/react-music-app/refs/heads/main/public/images/desktop-screen.png" alt="App Screenshot"/>
 

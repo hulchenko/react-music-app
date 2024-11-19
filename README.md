@@ -6,15 +6,15 @@ BoomBox is a simple yet visually appealing music player application that allows 
 
 ### Features:
 
-Visual Playback: A dynamic visual display that enhances the music experience.
-Play and Pause: Start and stop the music with a single click.
-Skip to Any Part of the Song: Move the playback slider to jump to any part of the current track.
-Navigate Between Songs: Skip to the next song or go back to the previous one easily.
+- Visual Playback: A dynamic visual display that enhances the music experience.
+- Play and Pause: Start and stop the music with a single click.
+- Skip to Any Part of the Song: Move the playback slider to jump to any part of the current track.
+- Navigate Between Songs: Skip to the next song or go back to the previous one easily.
 
 ### Technologies Used:
 
-React
-SCSS
+- React
+- SCSS
 
 ### Live Demo:
 

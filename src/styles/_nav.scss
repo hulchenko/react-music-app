@@ -4,15 +4,16 @@ nav {
   justify-content: space-around;
   align-items: center;
   h1 {
-    font-family: 'Monoton', cursive;
-    font-size: 2.5rem;
-    color: palevioletred;
-    text-shadow: 1px 1px 8px rgb(212, 120, 151);
+    font-family: "Monoton", cursive;
+    color: white;
+    letter-spacing: 0.25rem;
+    text-shadow: 0 0 4px palevioletred, 0 0 4px palevioletred, 0 0 4px palevioletred, 0 0 4px palevioletred, 0 0 4px palevioletred;
   }
   button {
     background: transparent;
     cursor: pointer;
     border: 2px solid #333;
+    border-radius: 5px;
     padding: 0.5rem;
     transition: all 0.3s ease-in-out;
     &:hover {

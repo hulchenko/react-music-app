@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react'; //not required anymore for App.js
+import React, { useState, useRef } from "react"; //not required anymore for App.js
 //Import Styles
-import './styles/app.scss';
+import "./styles/app.scss";
 //Adding components
-import Song from './components/Song';
-import Player from './components/Player';
-import Library from './components/Library';
-import Nav from './components/Nav';
+import Song from "./components/Song";
+import Player from "./components/Player";
+import Library from "./components/Library";
+import Nav from "./components/Nav";
 //Import Util
-import data from './data';
+import data from "./data";
 
 function App() {
   //Ref(used to reference an element)
@@ -44,7 +44,7 @@ function App() {
     if (isPlaying) audioRef.current.play();
   };
   return (
-    <div className={`App ${libraryStatus ? 'library-active' : ''}`}>
+    <div className={`App ${libraryStatus ? "library-active" : ""}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song isPlaying={isPlaying} currentSong={currentSong} />
       <Player
@@ -58,14 +58,7 @@ function App() {
         setSongs={setSongs}
         setCurrentSong={setCurrentSong}
       />
-      <Library
-        songs={songs}
-        setCurrentSong={setCurrentSong}
-        audioRef={audioRef}
-        isPlaying={isPlaying}
-        setSongs={setSongs}
-        libraryStatus={libraryStatus}
-      />
+      <Library songs={songs} setCurrentSong={setCurrentSong} audioRef={audioRef} isPlaying={isPlaying} setSongs={setSongs} libraryStatus={libraryStatus} />
       <audio
         ref={audioRef}
         src={currentSong.audio}
